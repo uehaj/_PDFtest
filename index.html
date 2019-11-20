@@ -3,23 +3,29 @@
     <script language="JavaScript">
                   <!-- 新しいウィンドウを開いて印刷ダイアログを開く
                   function newwinprint1(){
-                    winprint = window.open("test.pdf", "frame");
+                    var winprint = window.open("test.pdf", "_blank", "width=100,height=100");
                     winprint.print();
                   }
                   function newwinprint2(){
-                    winprint = window.open("test.pdf", "frame");
+                    var winprint = window.open("test.pdf", "_blank", "width=100,height=100");
                     setTimeout(function () {
                       winprint.print();
                     }, 5000);
+                  }
+                  function newwinprint3(){
+                    var winprint = window.open("test.pdf", "_blank", "width=100,height=100");
+                    winprint.onload(function () {
+                      winprint.print();
+                    });
                   }
                   //end --->
     </script>
   </head>
   <body>
-    ABBB
     <form>
       <input type="button" value="print" onclick="newwinprint1()" />
       <input type="button" value="print with sleep" onclick="newwinprint2()" />
+      <input type="button" value="print with onload" onclick="newwinprint3()" />
     </form>
   </body>
 </html>
