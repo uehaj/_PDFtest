@@ -3,16 +3,19 @@
     <script language="JavaScript">
                   <!-- 新しいウィンドウを開いて印刷ダイアログを開く
                   function newwinprint1(){
+                    console.log('newwinprint1()');
                     var winprint = window.open("test.pdf", "_blank", "width=100,height=100");
                     winprint.print();
                   }
                   function newwinprint2(){
+                    console.log('newwinprint2()');
                     var winprint = window.open("test.pdf", "_blank", "width=100,height=100");
                     setTimeout(function () {
                       winprint.print();
                     }, 5000);
                   }
                   function newwinprint3(){
+                    console.log('newwinprint3()');
                     var winprint = window.open("test.pdf", "_blank", "width=100,height=100");
                     winprint.onload = function () {
                       winprint.print();
