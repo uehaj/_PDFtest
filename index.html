@@ -2,11 +2,15 @@
   <head>
     <script language="JavaScript">
                   <!-- 新しいウィンドウを開いて印刷ダイアログを開く
-                  function newwinprint(){
-            //      winprint=window.open("https://www.surugabank.co.jp/surugabank/kojin/topics/pdf/20180907_3.pdf","ああ");
-      //            winprint = window.open("https://codeday.me/jp/qa/20190403/537962.html", "frame");
-                  winprint = window.open("test.pdf", "frame");
-                  winprint.print();
+                  function newwinprint1(){
+                    winprint = window.open("test.pdf", "frame");
+                    winprint.print();
+                  }
+                  function newwinprint2(){
+                    winprint = window.open("test.pdf", "frame");
+                    setTimeout(function () {
+                      winprint.print();
+                    }, 5000);
                   }
                   //end --->
     </script>
@@ -14,7 +18,8 @@
   <body>
     ABBB
     <form>
-      <input type="button" value="xx" onclick="newwinprint()" name="印刷" />
+      <input type="button" value="print" onclick="newwinprint1()" />
+      <input type="button" value="print with sleep" onclick="newwinprint2()" />
     </form>
   </body>
 </html>
