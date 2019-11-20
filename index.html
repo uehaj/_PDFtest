@@ -6,7 +6,6 @@
                     console.log('newwinprint1()');
                     var winprint = window.open("test.pdf", "_blank", "top=1000,left=1000");
                     winprint.print();
-                    winprint.close();
                   }
                   function newwinprint2(){
                     console.log('newwinprint2()');
@@ -14,7 +13,6 @@
                     setTimeout(function () {
                       winprint.print();
                     }, 5000);
-                    winprint.close();
                   }
                   function newwinprint3(){
                     console.log('newwinprint3()');
@@ -22,7 +20,6 @@
                     winprint.onload = function () {
                       winprint.print();
                     };
-                    winprint.close();
                   }
                   //end --->
     </script>
